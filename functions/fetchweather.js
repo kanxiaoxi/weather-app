@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
 
   // 调用API
   const fetchwether = async () => {
-    xios.get(URL)
+    axios.get(URL)
       .then(res => send(res.data))
       .catch(err => send(err));
   }

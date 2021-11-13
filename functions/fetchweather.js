@@ -29,7 +29,7 @@ exports.handler = function (event, context, callback) {
       //   'Access-Control-Allow-Origin': '*',
       //   'Access-Control-ALlow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
       // },
-      // body: JSON.stringify(body)
+      body: JSON.stringify(body)
     })
   };
 

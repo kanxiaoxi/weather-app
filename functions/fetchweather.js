@@ -15,8 +15,8 @@ exports.handler = function (event, context, callback) {
   const URL = `${API_BASE_URL}?${params}`;
 
   // 调用API
-  const getUsers = async () => {
-    const data = await axios.get(URL)
+  const fetchwether = async () => {
+    xios.get(URL)
       .then(res => send(res.data))
       .catch(err => send(err));
   }
@@ -35,6 +35,6 @@ exports.handler = function (event, context, callback) {
 
   // 确保请求方法是GET
   if (event.httpMethod === 'GET') {
-    getUsers();
+    fetchwether();
   }
 }
